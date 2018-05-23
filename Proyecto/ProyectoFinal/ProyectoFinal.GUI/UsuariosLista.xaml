@@ -1,0 +1,279 @@
+﻿<Window x:Class="ProyectoFinal.GUI.UsuariosLista"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinal.GUI"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="UsuariosLista" Height="500" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Usuario">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <WrapPanel Grid.Row="0">
+                        <Button x:Name="btnUsuarioNuevo" Width="80" Click="btnUsuarioNuevo_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Nuevo</Label>
+                                <Image Source="/Imagenes/user_add.png" Height="16"></Image>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnUsuarioEditar" Width="80" Click="btnUsuarioEditar_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Editar</Label>
+                                <Image Source="/Imagenes/user_edit.png" Height="16"></Image>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnUsuarioGuardar" Width="80" Click="btnUsuarioGuardar_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Guardar</Label>
+                                <Image Source="/Imagenes/Bullet_disk.png" Height="20"></Image>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnUsuarioCancelar" Width="80" Click="btnUsuarioCancelar_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Cancelar</Label>
+                                <Image Source="/Imagenes/cancel.png" Height="13"></Image>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnUsuarioEliminar" Width="80" Click="btnUsuarioEliminar_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Eliminar</Label>
+                                <Image Source="/Imagenes/user_delete.png" Height="16"></Image>
+                            </StackPanel>
+                        </Button>
+                    </WrapPanel>
+                    <WrapPanel Grid.Row="1">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Id:</TextBlock>
+                            <TextBlock x:Name="txbUsuarioId"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Nombre de Usuario</TextBlock>
+                            <TextBox x:Name="txbNombreUsuario" Width="200"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Contraseña</TextBlock>
+                            <TextBox x:Name="txbContraseniaUsuario" Width="200"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Tipo de Usuario</TextBlock>
+                            <TextBox x:Name="txbUsuarioTipo" Width="200"></TextBox>
+                        </StackPanel>
+                    </WrapPanel>
+                    <ListView x:Name="dtgUsuarios" Grid.Row="2"></ListView>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Empleados">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <WrapPanel Grid.Row="0">
+                        <Button x:Name="btnEmpleadoNuevo" Width="80" Click="btnEmpleadoNuevo_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Nuevo</Label>
+                                <Image Source="/Imagenes/add.png" Height="16"></Image>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnEmpleadoEditar" Width="80" Click="btnEmpleadoEditar_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Editar</Label>
+                                <Image Source="/Imagenes/pencil.png" Height="16"></Image>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnEmpleadoGuardar" Width="80" Click="btnEmpleadoGuardar_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Guardar</Label>
+                                <Image Source="/Imagenes/Bullet_disk.png" Height="20"></Image>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnEmpleadoCancelar" Width="80" Click="btnEmpleadoCancelar_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Cancelar</Label>
+                                <Image Source="/Imagenes/cancel.png" Height="13"></Image>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnEmpleadoEliminar" Width="80" Click="btnEmpleadoEliminar_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Eliminar</Label>
+                                <Image Source="/Imagenes/bullet_delete.png" Height="25"></Image>
+                            </StackPanel>
+                        </Button>
+                    </WrapPanel>
+                    <WrapPanel Grid.Row="1">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Id:</TextBlock>
+                            <TextBlock x:Name="txbEmpleadoId"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Nombre de Empleado</TextBlock>
+                            <TextBox x:Name="txbEmpleadoNombre" Width="200"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Apellios de Empleado</TextBlock>
+                            <TextBox x:Name="txbEmpleadoApellidos" Width="200"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Cargo</TextBlock>
+                            <TextBox x:Name="txbEmpleadoCargo" Width="200"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Direccion</TextBlock>
+                            <TextBox x:Name="txbEmpleadoDireccion" Width="200"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Telefono</TextBlock>
+                            <TextBox x:Name="txbEmpleadoTelefono" Width="200"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock>Correo</TextBlock>
+                            <TextBox x:Name="txbEmpleadoCorreo" Width="200"></TextBox>
+                        </StackPanel>
+                    </WrapPanel>
+                    <ListView x:Name="dtgEmpleados" Grid.Row="2">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                                        <TextBlock Text="|" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding NombreEmpleado}"/>
+                                        <TextBlock Text="|" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding ApellidosEmpleado}"/>
+                                    </StackPanel>
+                                    <Expander>
+                                        <StackPanel Grid.Column="1" Grid.Row="1">
+                                            <Label Content="{Binding Cargo}"/>
+                                            <Label Content="{Binding DireccionEmpleado}"/>
+                                            <Label Content="{Binding TelefonoEmpleado}"/>
+                                            <Label Content="{Binding CorreoEmpleado}"/>
+                                        </StackPanel>
+                                    </Expander>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Paquete">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Grid.Row="0">
+                        <Image HorizontalAlignment="Left" Height="100" gif:ImageBehavior.AnimatedSource="/Imagenes/spc.gif"></Image>
+                        <StackPanel>
+                            <Label>Empleado</Label>
+                            <ComboBox x:Name="cmbEmpleadoPaquete" Width="200"></ComboBox>
+                            <Label>Producto</Label>
+                            <ComboBox x:Name="cmbProductoPaquete" Width="200"></ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <WrapPanel Grid.Row="1">
+                        <StackPanel Orientation="Horizontal" Grid.Row="1">
+                            <Label>Id:</Label>
+                            <TextBlock x:Name="txbPaqueteId"></TextBlock>
+                            <Label>Prestamo:</Label>
+                            <TextBlock x:Name="dpPrestamo"></TextBlock>
+                            <Label>Entrega</Label>
+                            <DatePicker x:Name="dpEntrega" Width="200"></DatePicker>
+                            <Label>Cantidad</Label>
+                            <TextBox x:Name="txbCantidadPaquete" Width="100"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label>Firma Solicitante</Label>
+                            <TextBox x:Name="txbFirmaSolicitante" Width="140"></TextBox>
+                            <Label>Firma Encargado</Label>
+                            <TextBox x:Name="txbFirmaEncargado" Width="140"></TextBox>
+                        </StackPanel>
+                    </WrapPanel>
+                    <WrapPanel Grid.Row="2">
+                        <Button x:Name="btnPaqueteNuevo" Width="80" Click="btnPaqueteNuevo_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Nuevo</Label>
+                                <Image Source="/Imagenes/package_add.png" Height="16"></Image>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnPaqueteEditar" Width="80" Click="btnPaqueteEditar_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Editar</Label>
+                                <Image Source="/Imagenes/note_edit.png" Height="16"></Image>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnPaqueteGuardar" Width="80" Click="btnPaqueteGuardar_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Guardar</Label>
+                                <Image Source="/Imagenes/package_go.png" Height="16"></Image>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnPaqueteCancelar" Width="80" Click="btnPaqueteCancelar_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Cancelar</Label>
+                                <Image Source="/Imagenes/note_error.png" Height="16"></Image>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnPaqueteEliminar" Width="80" Click="btnPaqueteEliminar_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Label>Eliminar</Label>
+                                <Image Source="/Imagenes/package_delete.png" Height="16"></Image>
+                            </StackPanel>
+                        </Button>
+                    </WrapPanel>
+                    <ListView x:Name="dtgPaquetes" Grid.Row="3">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                                        <TextBlock Text="|" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding EmpleadoSolicitante}"/>
+                                        <TextBlock Text="|" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding ProductoSolicitado}"/>
+                                    </StackPanel>
+                                    <Expander>
+                                        <StackPanel Grid.Column="1" Grid.Row="1">
+                                            <Label Content="{Binding FechaPrestamo}"/>
+                                            <Label Content="{Binding FechaEntrega}"/>
+                                            <Label Content="{Binding CantidadSolicitado}"/>
+                                            <Label Content="{Binding FirmaSolicitante}"></Label>
+                                            <Label Content="{Binding FirmaEncargado}"></Label>
+                                        </StackPanel>
+                                    </Expander>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

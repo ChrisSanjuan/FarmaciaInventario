@@ -1,0 +1,11 @@
+c:\POO\ProyectoFinal\ProyectoFinal.BIZ\bin\Debug\ProyectoFinal.BIZ.dll
+c:\POO\ProyectoFinal\ProyectoFinal.BIZ\bin\Debug\ProyectoFinal.BIZ.pdb
+c:\POO\ProyectoFinal\ProyectoFinal.BIZ\bin\Debug\LiteDB.dll
+c:\POO\ProyectoFinal\ProyectoFinal.BIZ\bin\Debug\ProyectoFinal.COMMON.dll
+c:\POO\ProyectoFinal\ProyectoFinal.BIZ\bin\Debug\ProyectoFinal.COMMON.pdb
+c:\POO\ProyectoFinal\ProyectoFinal.BIZ\bin\Debug\LiteDB.xml
+c:\POO\ProyectoFinal\ProyectoFinal.BIZ\obj\Debug\ProyectoFinal.BIZ.csprojResolveAssemblyReference.cache
+c:\POO\ProyectoFinal\ProyectoFinal.BIZ\obj\Debug\ProyectoFinal.BIZ.dll
+c:\POO\ProyectoFinal\ProyectoFinal.BIZ\obj\Debug\ProyectoFinal.BIZ.pdb
+C:\POO\ProyectoFinal\ProyectoFinal.BIZ\bin\Debug\WpfAnimatedGif.dll
+C:\POO\ProyectoFinal\ProyectoFinal.BIZ\bin\Debug\WpfAnimatedGif.xml
